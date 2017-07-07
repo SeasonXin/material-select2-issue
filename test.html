@@ -1,0 +1,206 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Setting</title>
+
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="resources/materialize/css/materialize.min.css">
+<link href="resources/css/icon.css" rel="stylesheet">
+<link href="resources/select2-4.0.2/dist/css/select2.min.css" rel="stylesheet">
+<link href="resources/select2-4.0.2/dist/css/select2-materialize.css" rel="stylesheet">
+
+    <style type="text/css">
+        .section {
+            height: 1000px;
+            padding: 30px;
+        }
+
+        .table-of-contents {
+            position: fixed;
+            right: 0;
+        }
+        .ilike-blue-container {
+            @extend .blue, .lighten-4;
+        }
+
+        
+
+    </style>
+
+
+</head>
+
+<body>
+<header>
+
+</header>
+<main>
+    <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="btn-floating btn-large red">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul>
+            <li><a id="queryBtn" class="btn-floating btn-large blue darken-1"><i class="material-icons"></i>Query</a></li>
+            <li><a id="addBtn" class="btn-floating btn-large green"><i class="material-icons"></i>Add</a></li>
+            <li><a id="updateBtn" class="btn-floating btn-large yellow"><i class="material-icons"></i>Modify</a></li>
+            <li><a id="deleteBtn" class="btn-floating btn-large red"><i class="material-icons"></i>Delete</a></li>
+            <li><a id="exportBtn" class="btn-floating btn-large blue"><i class="material-icons"></i>Export</a></li>
+            <li><a id="resetBtn" class="btn-floating btn-large red"><i class="material-icons"></i>Reset</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="productCondition" class="section scrollspy">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="card cyan accent-1 z-depth-5">
+                                <div class="card-content">
+                                    <span class="card-title blue-text">Product Condition</span>
+                                    <div class="row">
+                                        <div class="input-field col s5">
+                                            <select id="productCateSel">
+												<option>cate1</option>
+												<option>cate2</option>
+                                            </select>
+
+
+
+                                            
+                                            <label for="productCateSel" class="blue-text">Product Cate</label>
+
+                                            
+
+                                        </div>
+                                        <div class="input-field col s1">
+                                            <a class=" waves-effect waves-light bule" href="#modal1"><i class="material-icons">add</i></a>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="productSizeTxt" type="text" class="validate">
+                                            <label for="productSizeTxt" class="blue-text">Product Size</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="ProductIdSel">
+												<option></option>
+                                                <option>prod1</option>
+												<option>prod2</option>
+												<option>prod3</option>
+												<option>prod4</option>
+                                            </select>
+                                            <label class="blue-text" >Product</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="groupLotTxt" type="text" class="validate">
+                                            <label for="groupLotTxt" class="blue-text">Group/Lot</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="opeIdSel">
+                                                <option value="" disabled selected>Choose your option</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                                <option value="3">option 3</option>
+                                            </select>
+                                            <label class="light-green-text accent-3">Operation*</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="preOpeIdSel">
+                                                <option value="" disabled selected>Choose your option</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                                <option value="3">option 3</option>
+                                            </select>
+                                            <label class="purple-text">Pre-Operation</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="eqIdSel">
+                                                <option value="" disabled selected>Choose your option</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                                <option value="3">option 3</option>
+                                            </select>
+                                            <label class="light-green-text accent-3">EQID</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="preEqptIdSel">
+                                                <option value="" disabled selected>Choose your option</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                                <option value="3">option 3</option>
+                                            </select>
+                                            <label class="purple-text ">Pre-EQID</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="subEqIdSel">
+                                                <option value="" disabled selected></option>
+                                                
+                                            </select>
+                                            <label class="light-green-text accent-3">Sub EQID</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <select id="preSubEqptIdSel">
+                                                <option value="" disabled selected> </option>
+                                                
+                                            </select>
+                                            <label class="purple-text">Pre-Sub EQID</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="ruleDscTxt" type="text" class="validate">
+                                            <label for="groupLotTxt" class="blue-text">Rule Desc</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+
+                <div id="ruleResult" class="section scrollspy">
+                    <table id="ruleTable" >  
+                        <thead>
+                        <tr class="lime accent-2 ">
+                            <th>Rule Type</th>
+                            <th>Product</th>
+                            <th>Group/Lot</th>
+                            <th>Operation</th>
+                            <th>EQID</th>
+                            <th>Sub EQID</th>
+                   
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="col hide-on-small-only m3 l2">
+                <ul class="section table-of-contents">
+                    <li><a href="#productCondition">Condition</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a id="resultALink" href="#ruleResult">Result</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+
+
+</body>
+<script src="resources/jquery/jquery-3.2.1.min.js"></script>
+<script src="resources/jquery/jquery-migrate-1.1.0.min.js"></script>
+<script src="resources/materialize/js/materialize.min.js"></script>
+<script src="resources/DataTables-1.10.15/media/js/jquery.dataTables.js"></script>
+<script src="resources/DataTables-1.10.15/media/js/dataTables.material.min.js"></script>
+<script src="resources/select2-4.0.2/dist/js/select2.min.js"></script>
+<script src="test.js"></script>
+</html>
